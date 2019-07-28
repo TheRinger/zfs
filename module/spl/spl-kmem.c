@@ -198,7 +198,7 @@ spl_kvmalloc(size_t size, gfp_t lflags)
 	 * when kmalloc failed because __vmalloc internally uses GPF_KERNEL
 	 * allocations. Stop here.
 	 */
-	if ((lflags & GFP_KERNEL) != GFP_KERNEL))
+	if ((lflags & GFP_KERNEL) != GFP_KERNEL)
 		return (NULL);
 
 	return (__vmalloc(size, lflags | __GFP_HIGHMEM, PAGE_KERNEL));
